@@ -1,0 +1,64 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Ajouter evenement</ion-title>
+
+    <ion-buttons end>
+        <button ion-button icon-only (click)="closePage()">
+          <ion-icon name="ios-close-outline" style="font-size: 35px;"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-content" padding>
+  <form #registerForm="ngForm">
+
+    <ion-row (click)="uploadPicture()">
+
+      <img class="imgProfile" [(src)]="event.logoEvent" />
+
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-list no-lines>
+          <ion-item>
+            <ion-icon name="ios-list-outline" item-left></ion-icon>
+
+            <ion-input [(ngModel)]="event.nomEvent" type="text" placeholder="Nom evenement" name="titreCoffee" required></ion-input>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-icon name="ios-information-circle-outline" item-left></ion-icon>
+
+            <ion-input [(ngModel)]="event.descriptionEvent" type="text" placeholder="Description evenement" name="password"
+              required></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-icon name="ios-paper-outline" item-left></ion-icon>
+              <ion-input [(ngModel)]="event.dateEvent" type="text" placeholder="Date evenement" name="test" required></ion-input>
+            </ion-item>
+
+          <ion-item>
+            <ion-icon name="ios-paper-outline" item-left></ion-icon>
+            <ion-input [(ngModel)]="event.lieuEvent" type="text" placeholder="Lieu evenement" name="test" required></ion-input>
+          </ion-item>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="signup-col">
+        <button ion-button class="submit-btn" full type="submit" (click)="ajouterEvent()" [disabled]="!registerForm.form.valid">
+          Ajouter
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+</ion-content>

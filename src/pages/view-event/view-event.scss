@@ -1,0 +1,147 @@
+page-view-event {
+    $black-overlay: rgba(0, 0, 0, .3);
+    $text-color: #666;
+    $banner-text-color: white;
+    $content-color: whitesmoke;
+    $detail-background: rgba(236, 236, 236, .8);
+  
+    /* Header */
+    .toolbar-background {
+      border-color: transparent;
+      background: $black-overlay;
+    }
+  
+    .bar-button,
+    .toolbar-title {
+      color: $banner-text-color;
+    }
+  
+    /* Image */
+    .housing-image {
+      background-size: cover;
+      height: 58vh ;
+      position: relative;
+      opacity : 0.9;
+      background-position: center;
+      background-size: auto;
+    }
+  
+    .housing-banner {
+      color: $banner-text-color;
+      background: rgba(0, 0, 0, .6);
+      height: 12vh;
+      width: 100vw;
+      position: absolute;
+      bottom: -10px;
+      margin-bottom: 10px;
+  
+      .housing-title {
+        display: block;
+        font-size: 1.2rem;
+      }
+  
+      .price {
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+      }
+    }
+  
+    /* Content */
+    .content {
+      background: $content-color;
+    }
+  
+    .scroll-content {
+      padding-top: 0 !important;
+    }
+  
+    .main-content {
+      color: $text-color;
+  
+    }
+  
+    .listing-details ion-col {
+      padding: 1rem;
+      margin: 0.45rem;
+      background: $detail-background;
+      ion-icon {
+        color: #FBB040 ; 
+        margin-right: .5rem;
+      }
+    }
+  
+    .main-features {
+      color: #3cc59a;
+      ion-icon {
+        color : #FBB040 ;
+        font-size: 5.5rem !important;
+        margin-bottom: 3px ;
+      }
+      .item-block{
+        color: #2373BA ;
+        font-weight: bold;
+      }
+    }
+  
+    .item-block {
+      text-align: center;
+      display: block;
+    }
+  
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+      height: 50%;
+      border: 0;
+      border-radius: 50%;
+      width: 100%;
+      margin-top: 18%;
+      margin-bottom: 15px;
+      margin-left: 8px;
+      padding: 10px;
+    }
+  
+    .offerName {
+      margin-top: -5%;
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: bold;
+      padding: 8px;
+      display: block;
+      background-color: rgba(35, 115, 186, 0.7) ;
+    }
+  
+    .brandName {
+      margin-bottom: 2%;
+      margin-top: -7%;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px;
+      padding-top: 5px;
+      padding-bottom: 15px;
+      display: block;
+    }
+  
+    .divForInfo {
+      width: 65%;
+    }
+  
+    .badgePrice {
+      margin-left: 74%;
+      margin-top: -13%;
+  
+    }
+  
+  
+    ion-note {
+      font-size: 12px;
+      align-self: flex-start;
+      margin-top: 14px;
+    }
+  
+    .badge-ios{
+        padding: 8px ;
+        border-radius: 30px;
+    }
+}

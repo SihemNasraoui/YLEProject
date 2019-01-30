@@ -1,0 +1,32 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Lists Evenements</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+      <ion-fab right bottom>
+        <button ion-fab color="primary" (click)="presentModal()"><ion-icon name="ios-add-outline"></ion-icon></button>
+      </ion-fab>
+      <ion-spinner *ngIf="spin" class="center" color="primary"></ion-spinner>
+
+  <ion-list *ngFor="let item of listEvents | async"> 
+     
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src={{item.logoEvent}}>
+            </ion-thumbnail>
+            <h2> {{item.nomEvent}}</h2>
+            <button ion-button clear item-end (click)="viewEvent(item)">View</button>
+          </ion-item>
+
+  </ion-list>
+  
+
+
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+
+
+    <ion-title>
+      The 716 Lac 2
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content fullscreen elestic-header>
+  <section class="housing-image" [ngStyle]="{ 'background-image': 'url(' + event.logoEvent + ')'}">
+    <span class="offerName">{{event.nomEvent}}</span>
+  </section>
+
+  <section class="main-content">
+    <ion-grid class="main-features">
+      <ion-row>
+        <ion-col text-center>
+          <ion-icon name="ios-person"></ion-icon>
+          <span class="item-block">ADMIN</span>
+        </ion-col>
+
+        <ion-col text-center>
+          <ion-icon name="ios-time"></ion-icon>
+          <span class="item-block">{{event.dateEvent}}</span>
+        </ion-col>
+
+        <ion-col text-center>
+          <ion-icon name="ios-pin"></ion-icon>
+          <span class="item-block">{{event.lieuEvent}}</span>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="listing-details">
+      <ion-row>
+        <p margin-left margin-right no-margin-top style="text-align: justify">
+          {{event.descriptionEvent}}
+        </p>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="ios-time"></ion-icon>Durant les weekends
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </section>
+</ion-content>
+
+<ion-footer>
+  <div style="display: table; margin: auto auto" *ngIf="currentUser.userType=='admin'">
+    
+    <button ion-button large no-margin color="info">
+      Update
+    </button>
+
+    <button ion-button large no-margin color="danger">
+      Delete
+    </button>
+
+  </div>
+
+  <div style="display: table; margin: auto auto" *ngIf="currentUser.userType=='user'">
+    
+      <button ion-button large no-margin color="info">
+        Save it
+      </button>
+
+    </div>
+
+
+</ion-footer>
